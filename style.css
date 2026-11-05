@@ -1,0 +1,417 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+header {
+    position: relative;
+    background: #1d4ed8;
+    color: white;
+    text-align: center;
+    padding: 25px 12px;
+}
+
+header h1 {
+    margin: 0 0 8px;
+}
+
+.header-actions {
+    position: absolute;
+    top: 16px;
+    right: 4%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+.header-actions form {
+    display: block;
+}
+
+.header-actions button {
+    padding: 8px 10px;
+    background: #1e40af;
+}
+
+main {
+    width: 92%;
+    max-width: 1100px;
+    margin: 25px auto;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: minmax(200px, 0.7fr) minmax(300px, 1.3fr);
+    gap: 22px;
+    align-items: stretch;
+}
+
+.card {
+    background: white;
+    padding: 22px;
+    margin-bottom: 22px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #00000012;
+}
+
+.auth-card {
+    max-width: 520px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.auth-card form {
+    grid-template-columns: 1fr;
+    gap: 8px;
+}
+
+.auth-card label {
+    font-weight: 600;
+}
+
+.delete-form {
+    display: inline;
+}
+
+.delete-button {
+    padding: 6px 10px;
+    background: #b91c1c;
+}
+
+.delete-button:hover {
+    background: #991b1b;
+}
+
+.dashboard .card {
+    margin-bottom: 22px;
+}
+
+.dashboard-total {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.total-count {
+    margin: 8px 0 0;
+    color: #1d4ed8;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+}
+
+input,
+select {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: 0;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1e40af;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: left;
+}
+
+th {
+    background: #dbeafe;
+}
+
+.success {
+    color: #15803d;
+}
+
+.error {
+    color: #b91c1c;
+}
+
+a {
+    margin-right: 8px;
+}
+
+.feature-header {
+    padding: 22px 4%;
+}
+
+.feature-header h1 {
+    margin: 0 0 15px;
+}
+
+.feature-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.feature-nav a,
+.feature-nav span {
+    color: white;
+}
+
+.feature-nav a[aria-current="page"] {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.feature-nav.dashboard-nav {
+    margin-top: 16px;
+}
+
+.feature-nav.dashboard-nav a {
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.feature-nav.dashboard-nav a:hover,
+.feature-nav.dashboard-nav a:focus-visible {
+    background: #3b82f6;
+}
+
+.feature-nav form {
+    display: block;
+    margin: 0;
+}
+
+.feature-nav button {
+    padding: 8px 10px;
+    background: #1e40af;
+}
+
+.feature-nav.dashboard-nav button:hover,
+.feature-nav.dashboard-nav button:focus-visible {
+    background: #3b82f6;
+}
+
+.feature-filters,
+.feature-form {
+    display: flex;
+    align-items: end;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.feature-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.feature-filters label,
+.feature-form label {
+    display: grid;
+    gap: 6px;
+}
+
+.feature-filters input,
+.feature-filters select,
+.feature-form input,
+.feature-form select,
+td select {
+    min-width: 150px;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background: white;
+}
+
+.feature-form input {
+    width: 100%;
+}
+
+.attendance-save-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+}
+
+.attendance-save-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    min-width: 160px;
+    min-height: 42px;
+    padding: 10px 18px;
+    text-align: center;
+}
+
+.status,
+.grade {
+    display: inline-block;
+    padding: 4px 9px;
+    border-radius: 999px;
+    background: #e2e8f0;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.status-present,
+.grade-a,
+.grade-aplus,
+.grade-b {
+    color: #166534;
+    background: #dcfce7;
+}
+
+.status-absent,
+.grade-f {
+    color: #991b1b;
+    background: #fee2e2;
+}
+
+.status-on_leave,
+.grade-c,
+.grade-d {
+    color: #92400e;
+    background: #fef3c7;
+}
+
+.attendance-value {
+    color: #1e293b;
+}
+
+.subject-mark {
+    display: inline-block;
+    margin-bottom: 4px;
+    color: #1e293b;
+    white-space: nowrap;
+}
+
+.student-detail-link {
+    color: #1d4ed8;
+}
+
+#studentTable tbody td .attendance-value {
+    color: #1e293b;
+}
+
+#studentTable tbody td .grade-a,
+#studentTable tbody td .grade-aplus,
+#studentTable tbody td .grade-b {
+    color: #166534;
+}
+
+#studentTable tbody td .grade-c,
+#studentTable tbody td .grade-d {
+    color: #92400e;
+}
+
+#studentTable tbody td .grade-f {
+    color: #991b1b;
+}
+
+#studentTable tbody td a.student-detail-link {
+    color: #1d4ed8;
+}
+
+.empty-state {
+    padding: 16px;
+    color: #64748b;
+    text-align: center;
+}
+
+@media print {
+    .feature-header,
+    .feature-filters,
+    .feature-form,
+    button {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+    }
+
+    main {
+        width: 100%;
+        margin: 0;
+    }
+
+    .card {
+        box-shadow: none;
+        border: 1px solid #cbd5e1;
+    }
+}
+
+@media (max-width: 640px) {
+    .header-actions {
+        position: static;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 12px;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .feature-nav {
+        gap: 9px;
+    }
+
+    .feature-nav.dashboard-nav {
+        margin-top: 14px;
+    }
+
+    .feature-filters {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .feature-filters label,
+    .feature-filters input,
+    .feature-filters select {
+        width: 100%;
+    }
+
+    .attendance-save-actions {
+        justify-content: center;
+    }
+
+    .attendance-save-button {
+        width: 100%;
+        max-width: 220px;
+    }
+}
